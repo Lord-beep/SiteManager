@@ -1,69 +1,67 @@
-[🚀 SiteManager
+🚀 SiteManager
 
-SiteManager é uma aplicação desktop desenvolvida em Python para gerir e automatizar sites alojados em diferentes plataformas.
+Desktop application for managing and automating websites hosted on different platforms.
 
-A aplicação permite adicionar, editar, ativar, desativar e executar ações nos sites através de uma interface gráfica simples, mantendo as credenciais protegidas localmente.
+SiteManager provides a simple graphical interface to manage websites, securely store credentials locally, and execute platform-specific actions.
 
-✨ Funcionalidades
-🖥️ Interface gráfica moderna com CustomTkinter
-🌐 Gestão de múltiplos sites
-➕ Adicionar sites
-✏️ Editar sites
-🗑️ Apagar sites
-🟢 Ativar / desativar sites
-▶️ Executar ações manualmente
-⏱️ Configurar intervalos de execução
-🔐 Encriptação das credenciais
-🔑 Sistema de palavra-passe principal
-💾 Base de dados local com SQLite
-☁️ Integração com PythonAnywhere
-⚡ Integração com Supabase
-📦 Suporte para criação de versão portable para Windows
-☁️ Plataformas suportadas
+✨ Features
+🖥️ Graphical interface built with CustomTkinter
+🌐 Manage multiple websites
+➕ Add websites
+✏️ Edit websites
+🗑️ Delete websites
+🟢 Enable / disable websites
+▶️ Execute website actions manually
+⏱️ Configure execution intervals
+🔐 Encrypted credential storage
+🔑 Master password protection
+💾 Local SQLite database
+☁️ PythonAnywhere integration
+⚡ Supabase integration
+📦 Windows portable version
+☁️ Supported Platforms
 🐍 PythonAnywhere
 
-O SiteManager utiliza a API do PythonAnywhere para recarregar aplicações web.
+SiteManager uses the PythonAnywhere API to reload web applications.
 
-São utilizadas as seguintes informações:
+Required:
 
-Campo	Utilização
-Username	Identificação da conta
-API Key	Autenticação na API
-Domínio	Identificação da aplicação
+Username
+API Key
+Domain
 ⚡ Supabase
 
-A integração com Supabase permite verificar o estado de um projeto e solicitar a sua reativação quando este estiver pausado.
+SiteManager uses the Supabase Management API to check the project status and request a resume when the project is paused.
 
-São utilizadas:
+Required:
 
-Campo	Utilização
-Personal Access Token	Autenticação na API
-Project Ref	Identificação do projeto
-🔐 Segurança
+Personal Access Token
+Project Ref
+🔐 Security
 
-As credenciais dos sites são armazenadas localmente numa base de dados SQLite e protegidas através de encriptação.
+Sensitive credentials are encrypted before being stored locally.
 
-Os dados privados são mantidos fora do código-fonte e devem permanecer fora do GitHub.
+Local data must never be uploaded to GitHub.
 
-Ficheiros e diretórios locais ignorados pelo Git:
+The following directories are ignored by Git:
 
 data/
 config/
 logs/
 .venv/
-dist/
 build/
+dist/
 
 
-⚠️ Nunca publiques API Keys, tokens, passwords ou chaves de encriptação no GitHub.
+⚠️ Never commit passwords, API keys, access tokens, encryption keys, or other sensitive information to GitHub.
 
-🛠️ Tecnologias
-🐍 Python
-🎨 CustomTkinter
-🗄️ SQLite
-🌐 Requests
-📦 PyInstaller
-📁 Estrutura do projeto
+🛠️ Technologies
+Python
+CustomTkinter
+SQLite
+Requests
+PyInstaller
+📁 Project Structure
 SiteManager/
 │
 ├── core/
@@ -91,51 +89,51 @@ SiteManager/
 ├── .gitignore
 └── README.md
 
-🚀 Instalação
-1. Clonar o repositório
+🚀 Installation
+Requirements
+Windows
+Python 3.10+
+pip
+1. Clone the repository
 git clone https://github.com/Lord-beep/SiteManager.git
-
-
-Entrar na pasta:
-
 cd SiteManager
 
-2. Criar o ambiente virtual
+2. Create a virtual environment
 python -m venv .venv
 
-3. Ativar o ambiente virtual
-
-No Windows:
-
+3. Activate the virtual environment
+PowerShell
 .venv\Scripts\activate
 
-4. Instalar as dependências
+Git Bash
+source .venv/Scripts/activate
+
+4. Install dependencies
 pip install -r requirements.txt
 
-▶️ Executar
+▶️ Running
 
-Com o ambiente virtual ativo:
+Start the application with:
 
 python -m gui.app
 
 
-A aplicação irá criar os diretórios necessários para os dados locais.
+The required local directories are created automatically.
 
-📦 Criar versão Portable
+📦 Portable Version
 
-O projeto pode ser compilado para um executável Windows utilizando PyInstaller.
+A Windows portable executable can be created using PyInstaller.
 
 pyinstaller --noconfirm --clean --windowed --onefile --name SiteManager .\gui\app.py
 
 
-Depois da compilação:
+The executable will be created in:
 
 dist/
 └── SiteManager.exe
 
-Dados locais
 
-O executável utiliza diretórios externos para guardar os dados da aplicação:
+The application uses external folders for persistent local data:
 
 SiteManager/
 │
@@ -149,48 +147,47 @@ SiteManager/
     └── master_password.dat
 
 
-Estes ficheiros contêm dados locais e não devem ser publicados no GitHub.
+These files contain local data and should not be uploaded to GitHub.
 
-🧪 Testes
+🧪 Tests
 
-O projeto inclui testes para diferentes componentes:
+The project includes tests for:
 
-Core
-Base de dados
-Encriptação
-Segurança
-Gestão de sessão
-Supabase
+Core functionality
+Database
+Encryption
+Security
+Session management
+Supabase integration
 
-Para executar os testes:
+Run the tests with:
 
 pytest
 
-🔄 Git
+🔄 Git Workflow
 
-Para obter a versão mais recente:
+After making changes:
 
-git pull
-
-
-Para enviar alterações:
-
+git status
 git add .
-git commit -m "Update SiteManager"
+git commit -m "Describe your changes"
 git push
 
-📌 Estado do projeto
+📌 Project Status
 
-🚧 Em desenvolvimento
+🚧 Work in progress
 
-O SiteManager encontra-se em desenvolvimento e novas funcionalidades e plataformas poderão ser adicionadas no futuro.
+SiteManager is currently under development.
 
-👤 Autor
+More platforms, automation features, and improvements may be added in future versions.
+
+👤 Author
 
 Lord-beep
 
 GitHub:
+https://github.com/Lord-beep/SiteManager
 
-https://github.com/Lord-beep
+📄 License
 
-](https://github.com/Lord-beep/SiteManager faz o read me)
+No license has been defined for this project yet.
