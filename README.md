@@ -238,6 +238,3 @@ SiteManager is currently under development. More platforms, automation features,
 ## 👤 Author
 
 **Lord-beep**
-
-
-No license has been defined for this project yet.
