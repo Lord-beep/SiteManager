@@ -1,0 +1,22 @@
+# Ambiente virtual
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Dados locais
+data/
+config/
+logs/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Bases de dados
+*.db
+
+# Testes temporários
+.pytest_cache/
