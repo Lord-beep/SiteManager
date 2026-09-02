@@ -1,4 +1,4 @@
-🚀 SiteManager
+[🚀 SiteManager
 
 SiteManager é uma aplicação desktop desenvolvida em Python para gerir e automatizar sites alojados em diferentes plataformas.
 
@@ -193,3 +193,4 @@ GitHub:
 
 https://github.com/Lord-beep
 
+](https://github.com/Lord-beep/SiteManager faz o read me)
