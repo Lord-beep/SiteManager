@@ -238,10 +238,6 @@ SiteManager is currently under development. More platforms, automation features,
 ## 👤 Author
 
 **Lord-beep**
-GitHub: [https://github.com/Lord-beep/SiteManager](https://github.com/Lord-beep/SiteManager)
 
----
-
-## 📄 License
 
 No license has been defined for this project yet.
